@@ -5,22 +5,21 @@
 
 int main()
 {
-	std::cout << "Enter the number of array elements:\n";
-	int count = 0;
+	std::cout << "Enter the number elements:\n";
+	int count = 0, el;
 	std::cin >> count;
-	std::cout << "Enter the array elements:\n";
-	int *arr = new int[count];
-	for (int i = 0; i < count; i++)
-		std::cin >> arr[i];
-
-	int min = arr[0], max = arr[0], sum = 0;
-	for (int i = 0; i < count; i++)
+	std::cout << "Enter first element:\n";
+	std::cin >> el;
+	int min = el, max = el, sum = el;
+	for (int i = 0; i < count-1; i++)
 	{
-		if (arr[i] < min)
-			min = arr[i];
-		if (arr[i] > max)
-			max = arr[i];
-		sum += arr[i];
+		std::cout << "Enter element:\n";
+		std::cin >> el;
+		if (el < min)
+			min = el;
+		if (el > max)
+			max = el;
+		sum += el;
 	}
 
 	std::cout << "Minimal element: " << min << "\n";
